@@ -12,6 +12,9 @@ $string['quescolorsetting:myaddinstance'] = 'Add a new color scale to dashboard'
 $string['quescolorsetting']='Activity Progress Color Setting';
 $string['pluginname']='Activity Progress ';
 
+$string['attempted']='Attempted';
+$string['notattempted']='Not Attempted';
+
 $string['completecolor']='Completed Question Color';
 $string['completecolordesc']='Set color for completed Question';
 

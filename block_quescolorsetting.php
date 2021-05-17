@@ -66,7 +66,7 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 							class="complete"
-							title="Attempted" 
+							title="'.get_string('attempted','quescolorsetting').'" 
 							></span>
 						</a>';
 					}		
@@ -82,10 +82,9 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 								class="complete" 
-								title="Attempted" ></span>
+								title="'.get_string('attempted','quescolorsetting').'" ></span>
 							</a>';
-					}
-					else{
+					}else{
 						$showcolors = get_config('block_quescolorsetting','notcompletecolor');
 						$content.='
 							<a href="#question-'.$uniqueid.'-'.$slot.'">
@@ -95,7 +94,7 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 								class="complete" 
-								title="Not Attempted" ></span>
+								title="'.get_string('notattempted','quescolorsetting').'" ></span>
 							</a>';
 					}
 					
@@ -110,7 +109,7 @@ class block_quescolorsetting extends block_base
 						width:20px;
 						display: inline-block;" 
 						class="notcomplete" 
-						title="Not Attempted"
+						title="'.get_string('notattempted','quescolorsetting').'"
 						></span>
 				</a>';
 			}
