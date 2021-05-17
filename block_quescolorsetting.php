@@ -72,17 +72,33 @@ class block_quescolorsetting extends block_base
 					}		
 					
 				}else{
-					$showcolors = get_config('block_quescolorsetting','completecolor');
-					$content.='
-						<a href="#question-'.$uniqueid.'-'.$slot.'">
-						<span 
-							style="background:'.$showcolors.';
-							height:40px;
-							width:20px;
-							display: inline-block;" 
-							class="complete" 
-							title="Attempted" ></span>
-						</a>';
+					if($step->state!='todo'){
+						$showcolors = get_config('block_quescolorsetting','completecolor');
+						$content.='
+							<a href="#question-'.$uniqueid.'-'.$slot.'">
+							<span 
+								style="background:'.$showcolors.';
+								height:40px;
+								width:20px;
+								display: inline-block;" 
+								class="complete" 
+								title="Attempted" ></span>
+							</a>';
+					}
+					else{
+						$showcolors = get_config('block_quescolorsetting','notcompletecolor');
+						$content.='
+							<a href="#question-'.$uniqueid.'-'.$slot.'">
+							<span 
+								style="background:'.$showcolors.';
+								height:40px;
+								width:20px;
+								display: inline-block;" 
+								class="complete" 
+								title="Not Attempted" ></span>
+							</a>';
+					}
+					
 				}
 			}else{
 				$showcolors = get_config('block_quescolorsetting','notcompletecolor');
