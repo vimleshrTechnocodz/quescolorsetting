@@ -66,7 +66,7 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 							class="complete"
-							title="'.get_string('attempted','quescolorsetting').'" 
+							title="'.get_string('attempted','block_quescolorsetting').'" 
 							></span>
 						</a>';
 					}		
@@ -82,7 +82,7 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 								class="complete" 
-								title="'.get_string('attempted','quescolorsetting').'" ></span>
+								title="'.get_string('attempted','block_quescolorsetting').'" ></span>
 							</a>';
 					}else{
 						$showcolors = get_config('block_quescolorsetting','notcompletecolor');
@@ -94,7 +94,7 @@ class block_quescolorsetting extends block_base
 								width:20px;
 								display: inline-block;" 
 								class="complete" 
-								title="'.get_string('notattempted','quescolorsetting').'" ></span>
+								title="'.get_string('notattempted','block_quescolorsetting').'" ></span>
 							</a>';
 					}
 					
@@ -109,7 +109,7 @@ class block_quescolorsetting extends block_base
 						width:20px;
 						display: inline-block;" 
 						class="notcomplete" 
-						title="'.get_string('notattempted','quescolorsetting').'"
+						title="'.get_string('notattempted','block_quescolorsetting').'"
 						></span>
 				</a>';
 			}
