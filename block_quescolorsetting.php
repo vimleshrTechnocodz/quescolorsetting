@@ -47,7 +47,7 @@ class block_quescolorsetting extends block_base
 					if(!empty($status)){
 						$showcolors = get_config('block_quescolorsetting',$status);					
 						$content.='
-						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
+						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;margin: 1px;">
 							<span
 							 style="background:'.$showcolors.';
 								 height:40px;width:100%;
@@ -59,7 +59,7 @@ class block_quescolorsetting extends block_base
 					}else{
 						$showcolors = get_config('block_quescolorsetting','completecolor');
 						$content.='
-						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
+						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;margin: 1px;">
 						<span 
 							style="background:'.$showcolors.';
 								height:40px;
@@ -75,7 +75,7 @@ class block_quescolorsetting extends block_base
 					if($step->state!='todo'){
 						$showcolors = get_config('block_quescolorsetting','completecolor');
 						$content.='
-							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
+							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;margin: 1px;">
 							<span 
 								style="background:'.$showcolors.';
 								height:40px;
@@ -87,7 +87,7 @@ class block_quescolorsetting extends block_base
 					}else{
 						$showcolors = get_config('block_quescolorsetting','notcompletecolor');
 						$content.='
-							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
+							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;margin: 1px;">
 							<span 
 								style="background:'.$showcolors.';
 								height:40px;
@@ -102,7 +102,7 @@ class block_quescolorsetting extends block_base
 			}else{
 				$showcolors = get_config('block_quescolorsetting','notcompletecolor');
 				$content.='
-				<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
+				<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;margin: 1px;">
 					<span 
 						style="background:'.$showcolors.';
 						height:40px;
