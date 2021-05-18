@@ -34,7 +34,7 @@ class block_quescolorsetting extends block_base
 			$quesattempts=$DB->get_records('question_attempts', $conditions);			
 		}
 		$slot=0;	
-		$content.='<div class="activityprgress">';
+		$content.='<div class="activityprgress" style="display: flex;">';
 		foreach($quesattempts as $quesattempt){	
 			$slot++;
 			$conditions=array('questionattemptid'=>$quesattempt->id);
@@ -47,10 +47,10 @@ class block_quescolorsetting extends block_base
 					if(!empty($status)){
 						$showcolors = get_config('block_quescolorsetting',$status);					
 						$content.='
-						<a href="#question-'.$uniqueid.'-'.$slot.'">
+						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
 							<span
 							 style="background:'.$showcolors.';
-								 height:40px;width:20px;
+								 height:40px;width:100%;
 								 display: inline-block;" 
 							class="'.$status.'"
 							title="'.get_string($status,'assignmentques').'" 
@@ -59,11 +59,11 @@ class block_quescolorsetting extends block_base
 					}else{
 						$showcolors = get_config('block_quescolorsetting','completecolor');
 						$content.='
-						<a href="#question-'.$uniqueid.'-'.$slot.'">
+						<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
 						<span 
 							style="background:'.$showcolors.';
 								height:40px;
-								width:20px;
+								width:100%;
 								display: inline-block;" 
 							class="complete"
 							title="'.get_string('attempted','block_quescolorsetting').'" 
@@ -75,11 +75,11 @@ class block_quescolorsetting extends block_base
 					if($step->state!='todo'){
 						$showcolors = get_config('block_quescolorsetting','completecolor');
 						$content.='
-							<a href="#question-'.$uniqueid.'-'.$slot.'">
+							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
 							<span 
 								style="background:'.$showcolors.';
 								height:40px;
-								width:20px;
+								width:100%;
 								display: inline-block;" 
 								class="complete" 
 								title="'.get_string('attempted','block_quescolorsetting').'" ></span>
@@ -87,11 +87,11 @@ class block_quescolorsetting extends block_base
 					}else{
 						$showcolors = get_config('block_quescolorsetting','notcompletecolor');
 						$content.='
-							<a href="#question-'.$uniqueid.'-'.$slot.'">
+							<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
 							<span 
 								style="background:'.$showcolors.';
 								height:40px;
-								width:20px;
+								width:100%;
 								display: inline-block;" 
 								class="complete" 
 								title="'.get_string('notattempted','block_quescolorsetting').'" ></span>
@@ -102,11 +102,11 @@ class block_quescolorsetting extends block_base
 			}else{
 				$showcolors = get_config('block_quescolorsetting','notcompletecolor');
 				$content.='
-				<a href="#question-'.$uniqueid.'-'.$slot.'">
+				<a href="#question-'.$uniqueid.'-'.$slot.'" style="flex: 1;">
 					<span 
 						style="background:'.$showcolors.';
 						height:40px;
-						width:20px;
+						width:100%;
 						display: inline-block;" 
 						class="notcomplete" 
 						title="'.get_string('notattempted','block_quescolorsetting').'"
