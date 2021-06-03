@@ -12,6 +12,8 @@ $string['quescolorsetting:myaddinstance'] = 'Add a new color scale to dashboard'
 $string['quescolorsetting']='Activity Progress Color Setting';
 $string['pluginname']='Activity Progress ';
 
+$string['stusubmittype']='Enable all questions submission at a time';
+
 $string['attempted']='Attempted';
 $string['notattempted']='Not Attempted';
 

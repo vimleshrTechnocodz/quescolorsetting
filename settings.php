@@ -1,6 +1,11 @@
 <?php
 if($ADMIN->fulltree){
 
+	$settings->add(new admin_setting_configcheckbox('block_quescolorsetting/stusubmittype',
+		get_string('stusubmittype','block_quescolorsetting'),
+		get_string('stusubmittype','block_quescolorsetting'), 
+		0));
+
 	$settings->add(new admin_setting_configcolourpicker('block_quescolorsetting/notcompletecolor',
 	get_string('notcompletecolor','block_quescolorsetting'),
 	get_string('notcompletecolordesc','block_quescolorsetting'), 
