@@ -6,6 +6,13 @@ if($ADMIN->fulltree){
 		get_string('stusubmittype','block_quescolorsetting'), 
 		0));
 
+
+	$settings->add(new admin_setting_configcolourpicker('block_quescolorsetting/resubmitted',
+	get_string('resubmitted','block_quescolorsetting'),
+	get_string('resubmitteddesc','block_quescolorsetting'), 
+		0));
+
+
 	$settings->add(new admin_setting_configcolourpicker('block_quescolorsetting/notcompletecolor',
 	get_string('notcompletecolor','block_quescolorsetting'),
 	get_string('notcompletecolordesc','block_quescolorsetting'), 

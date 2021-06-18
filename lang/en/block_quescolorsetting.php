@@ -37,3 +37,6 @@ $string['needcorrectioniqadesc']='Set Color for Need Correction IQA Question';
 $string['iqaagreeonpass']='IQA Agree On Pass';
 $string['iqaagreeonpassdesc']='Set Color for IQA Agree On Pass Question';
 
+$string['resubmitted']='Re-Submitted';
+$string['resubmitteddesc']='Set Color for Re-Submitted Question';
+
